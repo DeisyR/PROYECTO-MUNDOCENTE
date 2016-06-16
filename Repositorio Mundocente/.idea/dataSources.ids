@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - easyfoodmob@localhost" uuid="b63ff105-9549-4634-bb90-88794b7f9669">
+    <database-info product="MySQL" version="5.5.5-10.1.10-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+      <schema id="1" name="easyfoodmob"/>
+      <table id="2" parent="1" name="comment"/>
+      <table id="3" parent="1" name="post"/>
+      <column id="4" parent="2" name="id_comment">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="5" parent="2" name="authorC">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;Anonimo&apos;</default-expression>
+      </column>
+      <column id="6" parent="2" name="descriptionC">
+        <mandatory>1</mandatory>
+        <data-type>varchar(370)</data-type>
+      </column>
+      <key id="7" parent="2" name="PRIMARY">
+        <columns>id_comment</columns>
+        <primary>1</primary>
+      </key>
+      <column id="8" parent="3" name="id_post">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="9" parent="3" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="10" parent="3" name="description">
+        <mandatory>1</mandatory>
+        <data-type>varchar(370)</data-type>
+      </column>
+      <column id="11" parent="3" name="author">
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;Anonimo&apos;</default-expression>
+      </column>
+      <column id="12" parent="3" name="id_comment">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="13" parent="3" name="PRIMARY">
+        <columns>id_post</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="14" parent="3" name="pos_fk_idc">
+        <columns>id_comment</columns>
+        <ref-key>comment.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>
