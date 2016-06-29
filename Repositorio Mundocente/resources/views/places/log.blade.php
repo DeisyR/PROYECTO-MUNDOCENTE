@@ -1,10 +1,11 @@
-@extends('layouts.app2')
+@extends('layouts.default')
 
 <meta charset="utf-8">
 
 <title> Mundocente</title>
 
 <!-- CSS -->
+<link rel="shortcut icon" href="img/LogMundocente-01.png"/>
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
@@ -18,8 +19,9 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-@section('content')
 
+
+@section('content')
         <!-- Top content -->
 <div class="top-content">
 
@@ -38,50 +40,19 @@
                         </div>
                     </div>
                     <div class="form-bottom">
-                        <!--form role="form" action="{{url('loginh')}}" method="post" class="login-form"-->
-                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
-                            {!! csrf_field() !!}
-                            <!--div-- class="form-group">
+                        <form role="form" action="{{url('loginh')}}" method="post" class="login-form">
+                            <div class="form-group">
                                 <label class="sr-only" for="form-username">Correo electrónico</label>
                                 <input type="text" name="username" placeholder="example@example.com" class="form-username form-control" id="username">
-                            </div-->
-                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label class="col-md-4 control-label">E-Mail Address</label>
-
-                                    <input type="email" class="form-control" name="email" value="{{ old('email') }}">
-
-                                    @if ($errors->has('email'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                    @endif
                             </div>
-
-                            <!--div-- class="form-group">
+                            <div class="form-group">
                                 <label class="sr-only" for="form-password">Contraseña</label>
 
                                 <input type="password" name="password" placeholder="Contraseña" class="form-password form-control" id="password">
-
-                            </div-->
-
-                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label class="col-md-4 control-label">Password</label>
-
-                                    <input type="password" class="form-control" name="password">
-
-                                    @if ($errors->has('password'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                    @endif
                             </div>
-                            <!--button type="submit" class="btn">Iniciar sesión!</button-->
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fa fa-btn fa-sign-in"></i>Login
-                            </button>
+                            <button type="submit" class="btn">Iniciar sesión!</button>
                             <br>
-                            <a class="btn btn-link" href="{{ url('/password/reset') }}">¿Olvido su contraseña?</a>
-                            <!--a-- href="olvidoContraseña.html">¿Olvido su contraseña?</a-->
+                            <a href="olvidoContraseña.html">¿Olvido su contraseña?</a>
                             <br>
                             <button type="submit" class="btn" onclick= "self.location.href = 'home'">Cancelar!</button>
 
@@ -112,7 +83,6 @@
 </div>
 
 
-
 <!-- Javascript -->
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -123,6 +93,4 @@
 <script src="js/placeholder.js"></script>
 <![endif]-->
 
-@endsection
-
-
+@stop

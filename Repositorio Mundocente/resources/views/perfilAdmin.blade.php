@@ -45,12 +45,12 @@
                     <div class="collapse navbar-collapse" id="navegation-fm">
                         <ul class="nav navbar-nav">
                             <li ><a href="home">Inicio</a></li>
-                            <li><a href="perfilr">Perfil</a></li>
-                            <li><a href="teachingr">Mis Publicaciones</a></li>
-                            <li><a href="eventsr">Eventos</a></li>
-                            <li><a href="callsr">Convocatorias</a></li>
-                            <li><a href="journalsr">revistas</a></li>
-                            <li><a href="contacsr">Contactenos</a></li>
+                            <li><a href="perfilAdmin">Perfil</a></li>
+                            <li><a href="publicationsAdmin">Publicaciones</a></li>
+                            <li><a href="teaching">Usuarios</a></li>
+                            <li><a href="teaching">Areas</a></li>
+                            <li><a href="teaching">Entidades</a></li>
+                            <li><a href="contacs">Contactenos</a></li>
                             </li>
 
                         </ul>
@@ -94,7 +94,7 @@
                                                 <div class="panel panel-default">
                                                     <div class="thumbnail"><img src="img\perfil\33787.png" class="img-circle pull"></div>
                                                     <div class="panel-body">
-                                                        <p class="lead">Nombre de Representante</p>
+                                                        <p class="lead">Nombre de Usuario</p>
                                                         <p>{{ Auth::user()->name}} {{ Auth::user()->lastname}}</p>
 
                                                         <p>
@@ -114,16 +114,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="panel panel-default">
 
-                                                    <div class="panel-body">
-                                                        <hr>
-                                                        <h4 class="text-center">
-                                                            <input type="button" class="btn" onclick= "self.location.href = 'newuserr'" value="Editar">
-                                                        </h4>
-                                                        <hr>
-                                                    </div>
-                                                </div>
 
                                             </div>
 
@@ -140,14 +131,25 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading"> <h4>Entidad</h4></div>
+                                                <!--div class="panel panel-default">
+                                                    <div class="panel-heading"> <h4>Areas</h4></div>
                                                     <div class="panel-body">
                                                         <ul class="list-group">
-                                                            @foreach($entity as $enti)
-                                                                <li class="list-group-item">{{$enti->name_entity}}</li>
+                                                            @foreach($listareas as $areas)
+                                                                <li class="list-group-item">{{$areas->name_area}}</li>
                                                             @endforeach
                                                         </ul>
+                                                    </div>
+                                                </div-->
+
+                                                <div class="panel panel-default">
+
+                                                    <div class="panel-body">
+                                                        <hr>
+                                                        <h4 class="text-center">
+                                                            <input type="button" class="btn" onclick= "self.location.href = 'newuser'" value="Editar">
+                                                        </h4>
+                                                        <hr>
                                                     </div>
                                                 </div>
 

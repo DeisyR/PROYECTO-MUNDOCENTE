@@ -44,7 +44,8 @@
                 <div class="collapse navbar-collapse" id="navegation-fm">
                     <ul class="nav navbar-nav">
                         <li ><a href="home">Inicio</a></li>
-                        <li><a href="perfil">Perfil</a></li>
+                        <li><a href="perfilr">Perfil</a></li>
+                        <li><a href="teachingr">Mis Publicaciones</a></li>
                         <li><a href="eventsr">Eventos</a></li>
                         <li><a href="callsr">Convocatorias</a></li>
                         <li><a href="journalsr">revistas</a></li>
