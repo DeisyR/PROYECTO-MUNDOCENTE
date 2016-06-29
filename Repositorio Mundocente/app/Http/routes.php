@@ -61,8 +61,12 @@ Route::group(['middleware'=>['auth','repre'],'prefix'=>'repre'], function(){
 Route::match(["get","post"],"perfilAdmin", "AdminController@showInfo");
 Route::match(["get","post"],"publicationsAdmin", "AdminController@showteaching");
 Route::match(["get","post"],"enablep/{id}", "AdminController@showp");
+<<<<<<< HEAD
 Route::match(["get","post"],"newUserAdmin", "AdminController@newUser");
 Route::match(["get","post"],"addUserAdmin", "AdminController@addUser");
+=======
+Route::match(["get","post"],"newUser", "AdminController@newUser");
+>>>>>>> origin/master
 //Route::get('enablep/{id}','AdminController@showp');
 //Route::match(["get","post"],"log", "AdminController@showpp");
 

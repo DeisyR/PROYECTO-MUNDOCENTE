@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\User;
+=======
+>>>>>>> origin/master
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
@@ -11,12 +14,15 @@ use App\publication;
 
 class AdminController extends Controller
 {
+<<<<<<< HEAD
 
     public function __construct()
     {
         $this->middleware('auth');
     }
 
+=======
+>>>>>>> origin/master
     /**
      * Display a listing of the resource.
      *
@@ -27,7 +33,10 @@ class AdminController extends Controller
         //
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     /**
      * Show the form for creating a new resource.
      *
@@ -55,6 +64,7 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function newUser()
     {
         //$publication = DB::select('UPDATE `publications` SET `state_publication`=1 WHERE `id_publication` = '.$id);
@@ -93,6 +103,8 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+=======
+>>>>>>> origin/master
     public function show($id)
     {
         //
