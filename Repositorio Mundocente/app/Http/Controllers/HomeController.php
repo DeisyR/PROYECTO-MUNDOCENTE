@@ -31,7 +31,9 @@ class HomeController extends Controller
     public function home(Request $request)
     {
         if($request->user()->type_person == 1){
-            return 'Es Admin';
+            echo 'Es Admin';
+            $listareas = DB::select('SELECT a.name_area FROM areas a, users u, interests i WHERE u.id = i.id AND a.id_area = i.id_area AND u.id = '.$request->user()->id.'');
+            return view("perfilAdmin", compact('listareas'));
         }elseif($request->user()->type_person == 2) {
             echo 'Docente';
             //

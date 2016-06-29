@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -87,7 +87,7 @@
                         </div>
 
                         <!-- Multiple Radios -->
-                        <div class="form-group">
+                        <!--div class="form-group">
                             <label class="col-md-4 control-label">Tipo persona</label>
                             <div class="col-md-7">
                                 <div class="radio">
@@ -101,7 +101,7 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div-->
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

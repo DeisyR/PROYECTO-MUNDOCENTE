@@ -57,6 +57,16 @@ Route::group(['middleware'=>['web','auth','docen'],'prefix'=>'docen'], function(
 Route::group(['middleware'=>['auth','repre'],'prefix'=>'repre'], function(){
 
 });
+//Admin
+Route::match(["get","post"],"perfilAdmin", "AdminController@showInfo");
+Route::match(["get","post"],"publicationsAdmin", "AdminController@showteaching");
+Route::match(["get","post"],"enablep/{id}", "AdminController@showp");
+Route::match(["get","post"],"newUserAdmin", "AdminController@newUser");
+Route::match(["get","post"],"addUserAdmin", "AdminController@addUser");
+//Route::get('enablep/{id}','AdminController@showp');
+//Route::match(["get","post"],"log", "AdminController@showpp");
+
+
 //Docente
 Route::match(["get","post"],"perfil", "UserController@showInfo");
 Route::match(["get","post"],"newuser", "UserController@showview");
@@ -68,6 +78,7 @@ Route::match(["get","post"],"perfilr", "RepresentanteController@showInfo");
 Route::match(["get","post"],"newuserr", "RepresentanteController@showview");
 Route::match(["get","post"],"createuserr", "RepresentanteController@store");
 Route::match(["get","post"],"teachingr", "RepresentanteController@showteaching");
+
 Route::get('eventsr','PublicationController@indexeventsr');
 Route::get('callsr','PublicationController@indexcallsr');
 Route::get('journalsr','PublicationController@indexjournalsr');

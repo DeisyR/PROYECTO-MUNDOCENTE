@@ -89,7 +89,7 @@
         <br>
         <br>
 
-        <strong>n_n!</strong> Los registros fueron almacenados satisfactoriamente
+        <strong> Los registros fueron almacenados satisfactoriamente</strong>
         <br>
         <br>
         <br>

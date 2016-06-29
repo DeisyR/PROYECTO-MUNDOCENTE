@@ -53,98 +53,19 @@
         </nav>
     </header>
 
-
     <main>
+        <div class="alert alert-success">
+            <br>
+            <br>
+            <br>
 
-        <input id="tab1" type="radio" name="tabs" checked>
-        <label for="tab1">Eventos</label>
+            <strong> Los registros fueron almacenados satisfactoriamente</strong>
+            <br>
+            <br>
+            <br>
 
-        <input id="tab2" type="radio" name="tabs">
-        <label for="tab2">Convocatorias</label>
-
-        <input id="tab3" type="radio" name="tabs">
-        <label for="tab3">Revistas</label>
-
-        <section id="content1">
-
-            @foreach($listevents as $event)
-                    <!-- /top nav Inferior-->
-            {{$id=$event->id_publication}}
-            <form method="post" action="{{url('enablep',[$id])}}" class="form-horizontal">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <div class="full col-md-13 col-md-offset">
-
-                <!-- main col right -->
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <hr>
-                        <p class="lead">{{$event->name_publication}}</p>
-                        <p>{{$event->description}}</p>
-                        <hr>
-                        <h4 class="text-center">
-                            <button id="Createcount" name="guardar" class="btn btn-primary"  onClick="f();">Activar</button>
-                        </h4>
-
-                    </div>
-                </div>
-
-            </div><!-- /col-9 -->
-            </form>
-            @endforeach
-        </section>
-
-        <section id="content2">
-            @foreach($listcalls as $call)
-
-                <form method="post" action="{{url('enablep',[$call->id_publication])}}" class="form-horizontal">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <div class="full col-md-13 col-md-offset">
-
-                        <!-- main col right -->
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <hr>
-                                <p class="lead">{{$call->name_publication}}</p>
-                                <p>{{$call->description}}</p>
-                                <hr>
-                                <h4 class="text-center">
-                                    <button id="Createcount" name="guardar" class="btn btn-primary"  onClick="f();">Activar</button>
-                                </h4>
-
-                            </div>
-                        </div>
-
-                    </div><!-- /col-9 -->
-                </form>
-            @endforeach
-        </section>
-        <section id="content3">
-            @foreach($listjournals as $journals)
-
-                <form method="post" action="{{url('enablep',[$journals->id_publication])}}" class="form-horizontal">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <div class="full col-md-13 col-md-offset">
-
-                        <!-- main col right -->
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <hr>
-                                <p class="lead">{{$journals->name_publication}}</p>
-                                <p>{{$journals->description}}</p>
-                                <hr>
-                                <h4 class="text-center">
-                                    <button id="Createcount" name="guardar" class="btn btn-primary"  onClick="f();">Activar</button>
-                                </h4>
-
-                            </div>
-                        </div>
-
-                    </div><!-- /col-9 -->
-                </form>
-            @endforeach
-        </section>
+        </div>
     </main>
-
 
     <br>
     <br>

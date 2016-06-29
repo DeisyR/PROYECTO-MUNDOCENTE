@@ -115,17 +115,17 @@ class RepresentanteController extends Controller
 
         //echo 'n_n '.$id.' n_n';
         //$listentities = DB::select('SELECT en.id_entity, en.name_entity, pl.name_place FROM `places` pl ,`entities` en WHERE pl.id_place = en.id_place');
-        $listevents = DB::select('SELECT * FROM `publications` WHERE `type_publication` = "Evento"');
-        $listcalls = DB::select('SELECT * FROM `publications` WHERE `type_publication` = "Revista"');
-        $listjournals = DB::select('SELECT * FROM `publications` WHERE `type_publication` = "Convocatoria"');
+        $listevents = DB::select('SELECT * FROM `publications` WHERE id = 4 AND `type_publication` = "Evento"');
+        $listcalls = DB::select('SELECT * FROM `publications` WHERE id = 4 AND `type_publication` = "Convocatoria"');
+        $listjournals = DB::select('SELECT * FROM `publications` WHERE id = 4 AND `type_publication` = "Revista"');
         /*$listevents = DB::select('SELECT users.name, interests.id_area, publications.name_publication, publications.id_publication, publications.description, affinities.id_area FROM users, interests, areas, affinities, publications WHERE users.id = interests.id && areas.id_area = interests.id_area && areas.id_area = affinities.id_area && publications.id_publication = affinities.id_publication && users.id = '.Auth::user()->id.' && publications.type_publication = "Evento"');*/
         //$listevents = DB::select('SELECT users.name, interests.id_area, publications.name_publication, publications.id_publication, publications.description, affinities.id_area FROM users, interests, areas, affinities, publications WHERE users.id = interests.id && areas.id_area = interests.id_area && areas.id_area = affinities.id_area && publications.id_publication = affinities.id_publication && users.id = ' . $request->user()->id . ' && publications.type_publication = "Evento"');
         //$listcalls = DB::select('SELECT users.name, interests.id_area, publications.name_publication, publications.id_publication, publications.description, affinities.id_area FROM users, interests, areas, affinities, publications WHERE users.id = interests.id && areas.id_area = interests.id_area && areas.id_area = affinities.id_area && publications.id_publication = affinities.id_publication && users.id = ' . $request->user()->id . ' && publications.type_publication = "Convocatoria"');
         //$listjournals = DB::select('SELECT users.name, interests.id_area, publications.name_publication, publications.id_publication, publications.description, affinities.id_area FROM users, interests, areas, affinities, publications WHERE users.id = interests.id && areas.id_area = interests.id_area && areas.id_area = affinities.id_area && publications.id_publication = affinities.id_publication && users.id = ' . $request->user()->id . ' && publications.type_publication = "Revista"');
-        echo 'n_n';
+        //echo 'n_n';
         //$collection = array_last($listevents, $listcalls, $listjournals);
         //return 'No es Admin';
-        return view("places.publications", compact('listevents', 'listcalls', 'listjournals'));
+        return view("places.publicationsr", compact('listevents', 'listcalls', 'listjournals'));
         //return view("places.teaching",compact('listevents'),compact('listcalls'),compact('listjournals'));
         //return view("places.teaching",compact('listevents'));
 
