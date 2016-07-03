@@ -5,7 +5,7 @@
 
 .owl-theme .owl-controls{
 	margin-top: 10px;
-	text-align: center;
+	text-align: 10px;
 }
 
 /* Styling Next and Prev buttons */
@@ -38,7 +38,7 @@
 .owl-theme .owl-controls .owl-page{
 	display: inline-block;
 	zoom: 1;
-	*display: inline;/*IE7 life-saver */
+	
 }
 .owl-theme .owl-controls .owl-page span{
 	display: block;
@@ -74,6 +74,6 @@
 
 /* preloading images */
 .owl-item.loading{
-	min-height: 150px;
-	background: url(AjaxLoader.gif) no-repeat center center
+
+	
 }

@@ -7,9 +7,37 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class PublicationController extends Controller
 {
+
+    public function __construct()
+    {
+        Carbon::setLocale('es');
+    }
+
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'name' => 'required|max:255',
+            'lastname' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|min:6|confirmed',
+        ],[
+            'name.required' => 'Debe digitar el nombre',
+            'name.max' => 'El nombre tiene una maximo 255 caracteres',
+            'lastname.required'  => 'Debe digitar el apellido',
+            'lastname.max' => 'El nombre tiene una maximo 255 caracteres',
+            'email.required'  => 'Debe digitar el correo',
+            'email.max' => 'El correo tiene una maximo 255 caracteres',
+            'email.unique' => 'El correo ya existe',
+            'password.required'  => 'Debe digitar la contraseña',
+            'password.min' => 'La contraseña debe ser de minimo 6 caracteres',
+            'password.confirmed' => 'Debe confirmar la contraseña',
+        ]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -135,8 +163,8 @@ class PublicationController extends Controller
         $descrip = $request->input("descrip");
         $link = $request->input("link");
         $email = $request->input("email");
-        $dates = $request->input("dates");
-        $datee = $request->input("datee");
+        $dates = date('Y-m-d',strtotime($request->input("dates")));
+        $datee = date('Y-m-d',strtotime($request->input("datee")));
         //$areas = 'required';
         $event = 'Evento';
         $user = $request->user()->id;
@@ -154,6 +182,15 @@ class PublicationController extends Controller
                 'id_place' => $place,
             ]
         );
+        //$p = \App\publication::find(3);
+        //$time = strtotime($p->start_date);
+        //$time = strtotime($dates);
+        //$date = date('d-m-Y',$time);
+        //$date = date('Y-m-d',$time);
+        //$date = Carbon::create('2015','10','07');
+        //$date = $date->format('d-m-Y');
+        //dd($date);
+        //dd($date->diffForHumans());
 
         $publication = publication::all()->last()->id_publication;
 
@@ -269,18 +306,25 @@ class PublicationController extends Controller
 
         //$this->validator($input);
         $this->validate($request, [
-            'title' => 'required',
-            'descrip' => 'required',
-            'link' => 'required',
-            'email' => 'required',
-            'dates' => 'required',
-            'datee' => 'required',
+            'title' => 'required|max:255',
+            'descrip' => 'required|max:255',
+            //'link' => 'required|max:255',
+            'email' => 'required|max:255',
+            'dates' => 'required|max:255',
+            'datee' => 'required|max:255',
             'areas' => 'required',
+            '' => 'required',
             //'lastname' => 'required|max:255',
 
         ],[
-            'title.required'=>'El titulo no se a digitado',
-            'descrip.required'=>'La descripcion no se a digitado',
+            'title.required'=>'Debe digitar el titulo',
+            'title.max' => 'El titulo tiene una maximo 255 caracteres',
+            'descrip.required'=>'Debe digitar la descripcion',
+            'descrip.max' => 'La descripcion tiene una maximo 255 caracteres',
+            'email.required'  => 'Debe digitar el correo',
+            'email.max' => 'El correo tiene una maximo 255 caracteres',
+            'dates.required'  => 'Debe digitar la fecha de inicio',
+            'dates.max' => 'la fecha de inicio tiene una maximo 255 caracteres',
             'areas.required'=>'La Area no se a seleccionado'
         ]);
         //Flash::success("Se ha registrado el usuario de manera exitosa!");

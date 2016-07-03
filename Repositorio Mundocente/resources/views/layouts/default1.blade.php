@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Mundocente</title>
+    <link rel="shortcut icon" href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/controltab.css" rel="stylesheet">
@@ -31,7 +32,7 @@
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                <li><a href="{{ url('/home') }}">Home</a></li>
+                <li><a href="{{ url('home') }}">Home</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -64,6 +65,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+<!--logout-->
+<script src="js/bootstrap.min.js"></script>
 </body>
 
 

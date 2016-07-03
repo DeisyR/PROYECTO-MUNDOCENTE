@@ -51,6 +51,7 @@
                 <li><a href=""></a></li>
                 <li><a href=""></a></li>
                 <li class="active"><a href="home">Inicio</a></li>
+                <li><a href="perfil">Perfil</a></li>
                 <li><a href="posts">Publicaciones</a></li>
                 <li><a href="contacs">Contactenos</a></li>
 
@@ -60,8 +61,8 @@
 
 
             <form action="" class="navbar-form navbar-right " role="search" style="margin-top:10px;">
-                <input type="button" class="btn " class="btn btn-boton" onclick= "self.location.href = 'login'" value="Iniciar Sección">
-                <input type="button" class="btn" onclick= "self.location.href = 'newuser'" value="Registrarse">
+                <input type="button" class="btn " class="btn btn-boton" onclick= "self.location.href='{{ url('/logout') }}'" value="Cerrar Sección">
+                <!--input type="button" class="btn" onclick= "self.location.href = 'newuser'" value="Registrarse"-->
 
             </form>
         </div>

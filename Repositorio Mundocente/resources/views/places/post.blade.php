@@ -1,4 +1,4 @@
-@extends('layouts.default1')
+@extends('layouts.default0')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -15,38 +15,51 @@
 
     @section('content')
         <header>
-            <nav class="navbar navbar-inverse navbar-static-top " role="navigation">
-                <div class="container">
-                    <div class="navbar-header">
+            <nav class="navbar navbar-inverse " role="navigation">
 
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegation-fm">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".navbar-1">
+                        <span class="sr-only">Desplegar navegación</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
 
-                            <span class="sr-only">Desplegar / Ocultar Menu</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <h1><a href="index.html"><span>Mundocente</span></a></h1>
-
-
-
-
-                        <!--Inicio menu-->
-                        <div class="collapse navbar-collapse" id="navegation-fm">
-                            <ul class="nav navbar-nav">
-                                <li ><a href="home">Inicio</a></li>
-                                <li><a href="perfil">Perfil</a></li>
-                                <li><a href="teaching">Publicaciones</a></li>
-                                <li><a href="contacs">Contactenos</a></li>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-
+                    </button>
+                    <a href="home" class=" " >
+                        <img src="img/LogMundocente.png" srcset="img/LogMundocente.png 768w" width="110">
+                    </a>
                 </div>
 
+                </br>
+                </br>
+
+                <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+                     otro elemento que se pueda ocultar al minimizar la barra -->
+                <div class="collapse navbar-collapse navbar-1">
+                    <ul class="nav navbar-nav navbar-center">
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li class="active"><a href="home">Inicio</a></li>
+                        <li><a href="perfil">Perfil</a></li>
+                        <li><a href="posts">Publicaciones</a></li>
+                        <li><a href="contacs">Contactenos</a></li>
+
+
+                    </ul>
+
+
+
+                    <form action="" class="navbar-form navbar-right " role="search" style="margin-top:10px;">
+                        <input type="button" class="btn " class="btn btn-boton" onclick= "self.location.href = 'login'" value="Iniciar Sección">
+                        <input type="button" class="btn" onclick= "self.location.href = 'newuser'" value="Registrarse">
+
+                    </form>
+                </div>
+                </div>
             </nav>
+
         </header>
 
 
@@ -66,10 +79,10 @@
                 <div class="row form-group">
                     <div class="col-xs-12 col-md-12">
                         <div class="panel panel-default">
-                            <div class="panel-image">
+                            <!--div class="panel-image">
                                 <img src="img/baner.jpg" class="panel-image-preview" />
                                 <label for="toggle-{{$event->id_publication}}"></label>
-                            </div>
+                            </div-->
                             <input type="checkbox" id="toggle-{{$event->id_publication}}" class="panel-image-toggle">
                             <div class="panel-body">
                                 <h4>{{$event->name_publication}}</h4>
@@ -85,18 +98,18 @@
                     </div>
                 </div>
             @endforeach
-
+                {{ $listevents->links() }}
         </section>
 
         <section id="content2">
-            @foreach($listcalls as $call)
+        @foreach($listcalls as $call)
                 <div class="row form-group">
                     <div class="col-xs-12 col-md-12">
                         <div class="panel panel-default">
-                            <div class="panel-image">
+                            <!--div class="panel-image">
                                 <img src="img/baner.jpg" class="panel-image-preview" />
                                 <label for="toggle-{{$call->id_publication}}"></label>
-                            </div>
+                            </div-->
                             <input type="checkbox" id="toggle-{{$call->id_publication}}" class="panel-image-toggle">
                             <div class="panel-body">
                                 <h4>{{$call->name_publication}}</h4>
@@ -112,16 +125,17 @@
                     </div>
                 </div>
             @endforeach
+            {{ $listcalls->links() }}
         </section>
         <section id="content3">
-            @foreach($listjournals as $journals)
+        @foreach($listjournals as $journals)
                 <div class="row form-group">
                     <div class="col-xs-12 col-md-12">
                         <div class="panel panel-default">
-                            <div class="panel-image">
+                            <!--<div class="panel-image">
                                 <img src="img/baner.jpg" class="panel-image-preview" />
                                 <label for="toggle-{{$journals->id_publication}}"></label>
-                            </div>
+                            </div>-->
                             <input type="checkbox" id="toggle-{{$journals->id_publication}}" class="panel-image-toggle">
                             <div class="panel-body">
                                 <h4>{{$journals->name_publication}}</h4>
@@ -137,6 +151,7 @@
                     </div>
                 </div>
             @endforeach
+            {{ $listjournals->links() }}
         </section>
     </main>
 

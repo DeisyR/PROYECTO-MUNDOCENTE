@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Mundocente</title>
+    <link rel="shortcut icon" href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script  src="js/jquery.js"></script>
@@ -30,8 +31,8 @@
             </button>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/home') }}">
-                Inicio
+            <a class="navbar-brand" href="{{ url('home') }}">
+                Login
             </a>
         </div>
 
@@ -70,6 +71,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+<!-- Javascript Backgroun-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!--logout-->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<!--Backgroun<script src="js/scripts.js"></script>-->
 </body>
 
 

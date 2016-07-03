@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 <meta charset="utf-8">
 
@@ -38,7 +38,6 @@
                         </div>
                     </div>
                     <div class="form-bottom">
-                        <!--form role="form" action="{{url('loginh')}}" method="post" class="login-form"-->
                         <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                             {!! csrf_field() !!}
                             <!--div-- class="form-group">

@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Mundocente</title>
+    <link rel="shortcut icon" href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/controltab.css" rel="stylesheet">
@@ -23,7 +24,7 @@
             </button>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/home') }}">
+            <a class="navbar-brand" href="{{ url('home') }}">
                 Inicio
             </a>
         </div>

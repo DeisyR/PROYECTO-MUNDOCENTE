@@ -9,16 +9,16 @@ and open the template in the editor.
 */
     #owl-demo .item img{
       display: block;
-      width: 100%;
-      height: auto;
+      width: 60%;
+      
     }
     #bar{
       width: 0%;
-      max-width: 100%;
+      max-width:60%;
       height: 4px;
       background: #7fc242;
     }
     #progressBar{
-      width: 100%;
+      width: 60%;
       background: #EDEDED;
     }

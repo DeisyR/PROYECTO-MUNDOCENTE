@@ -13,10 +13,27 @@ class IndexController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-        return view('index');
+
+        if($request->user() == null){
+            return view('index');
+        }elseif($request->user()->type_person == 1){
+            echo 'Es Admin';
+            return view('/indexD');
+        }elseif($request->user()->type_person == 2) {
+            echo 'Docente';
+            return view('/indexD');
+        }else{
+            echo 'Represetante';
+            return view('/indexD');
+        }
+    }
+
+    public function contact()
+    {
+        return view('places.contacts');
+        //return 'indexD' ;
     }
 
     /**

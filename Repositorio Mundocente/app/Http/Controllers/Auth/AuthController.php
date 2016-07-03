@@ -28,7 +28,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = 'perfil';
+    protected $redirectTo = 'indexD';
     //protected $username = 'name';
 
     /**
@@ -54,6 +54,17 @@ class AuthController extends Controller
             'lastname' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
+        ],[
+            'name.required' => 'Debe digitar el nombre',
+            'name.max' => 'El nombre tiene una maximo 255 caracteres',
+            'lastname.required'  => 'Debe digitar el apellido',
+            'lastname.max' => 'El nombre tiene una maximo 255 caracteres',
+            'email.required'  => 'Debe digitar el correo',
+            'email.max' => 'El correo tiene una maximo 255 caracteres',
+            'email.unique' => 'El correo ya existe',
+            'password.required'  => 'Debe digitar la contraseña',
+            'password.min' => 'La contraseña debe ser de minimo 6 caracteres',
+            'password.confirmed' => 'Debe confirmar la contraseña',
         ]);
     }
 

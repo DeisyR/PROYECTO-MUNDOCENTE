@@ -22,8 +22,13 @@ Route::get('/', function () {
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
-Route::get('/', 'HomeController@home');
+Route::get('home', 'IndexController@index');
+Route::get('/indexD', 'IndexController@index');
+Route::get('/index', 'IndexController@index');
+//Route::get('/', 'IndexController@index');
+Route::get('', 'HomeController@login');
+Route::get('/', 'HomeController@login');
+Route::match(["get","post"],'contacs', 'IndexController@contact');
 
 Route::get('/placeurl', 'PlaceController@creat');
 
@@ -61,12 +66,8 @@ Route::group(['middleware'=>['auth','repre'],'prefix'=>'repre'], function(){
 Route::match(["get","post"],"perfilAdmin", "AdminController@showInfo");
 Route::match(["get","post"],"publicationsAdmin", "AdminController@showteaching");
 Route::match(["get","post"],"enablep/{id}", "AdminController@showp");
-<<<<<<< HEAD
 Route::match(["get","post"],"newUserAdmin", "AdminController@newUser");
 Route::match(["get","post"],"addUserAdmin", "AdminController@addUser");
-=======
-Route::match(["get","post"],"newUser", "AdminController@newUser");
->>>>>>> origin/master
 //Route::get('enablep/{id}','AdminController@showp');
 //Route::match(["get","post"],"log", "AdminController@showpp");
 
@@ -76,6 +77,8 @@ Route::match(["get","post"],"perfil", "UserController@showInfo");
 Route::match(["get","post"],"newuser", "UserController@showview");
 Route::match(["get","post"],"createuser", "UserController@store");
 Route::match(["get","post"],"teaching", "UserController@showteaching");
+//Route::match(["get","post"],"posts", "UserController@showpost");
+Route::get('posts','UserController@showpost');
 
 //Representante
 Route::match(["get","post"],"perfilr", "RepresentanteController@showInfo");
@@ -145,7 +148,7 @@ Route::get('/home', 'HomeController@index');*/
 //Route::get('auth/login', 'Auth\AuthController@getLogin');
 //Route::get('auth/login', 'HomeController@index');
 //Route::post('auth/login', 'Auth\AuthController@postLogin');
-//Route::get('auth/logout', 'Auth\AuthController@getLogout');
+//Route::get('logout', 'Auth\AuthController@getLogout');
 
 
 

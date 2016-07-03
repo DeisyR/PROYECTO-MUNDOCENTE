@@ -7,12 +7,14 @@
 <link rel="stylesheet" href="css/style.css">
 
 @section('content')
+    <br><br><br><br><br><br>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
+
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
 
@@ -89,7 +91,7 @@
                         <!-- Multiple Radios -->
                         <div class="form-group">
                             <label class="col-md-4 control-label">Tipo persona</label>
-                            <div class="col-md-7">
+                            <div class="col-md-6">
                                 <div class="radio">
                                     <label>
                                         <input type="radio" id="docen" name="type_person" value="2"> Docente &nbsp;&nbsp;&nbsp;

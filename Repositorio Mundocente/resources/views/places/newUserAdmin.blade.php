@@ -39,8 +39,8 @@
                             <li><a href="perfilAdmin">Perfil</a></li>
                             <li><a href="publicationsAdmin">Publicaciones</a></li>
                             <li><a href="newUserAdmin">Usuarios</a></li>
-                            <li><a href="teaching">Areas</a></li>
-                            <li><a href="teaching">Entidades</a></li>
+                            <li><a href="">Areas</a></li>
+                            <li><a href="">Entidades</a></li>
                             <li><a href="contacs">Contactenos</a></li>
                             </li>
 

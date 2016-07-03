@@ -2,10 +2,7 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
 use App\User;
-=======
->>>>>>> origin/master
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
@@ -14,15 +11,12 @@ use App\publication;
 
 class AdminController extends Controller
 {
-<<<<<<< HEAD
 
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-=======
->>>>>>> origin/master
     /**
      * Display a listing of the resource.
      *
@@ -33,10 +27,7 @@ class AdminController extends Controller
         //
     }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
     /**
      * Show the form for creating a new resource.
      *
@@ -64,7 +55,6 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-<<<<<<< HEAD
     public function newUser()
     {
         //$publication = DB::select('UPDATE `publications` SET `state_publication`=1 WHERE `id_publication` = '.$id);
@@ -103,8 +93,6 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-=======
->>>>>>> origin/master
     public function show($id)
     {
         //
@@ -142,14 +130,34 @@ class AdminController extends Controller
     public function showInfo(Request $request)
     {
         //
-        $user = $request->user()->id;
-        //SELECT a.name_area FROM areas a, users u, interests i WHERE u.id = i.id AND a.id_area = i.id_area AND u.id = 4
+        if($request->user() == null){
+            return redirect('home');
+        }elseif($request->user()->type_person == 1){
+            echo 'Es Admin';
+            $listareas = DB::select('SELECT a.name_area FROM areas a, users u, interests i WHERE u.id = i.id AND a.id_area = i.id_area AND u.id = '.$request->user()->id.'');
+            return view("perfilAdmin", compact('listareas'));
+        }elseif($request->user()->type_person == 2) {
+            echo 'Docente';
+            //
+            $user = $request->user()->id;
+            //SELECT a.name_area FROM areas a, users u, interests i WHERE u.id = i.id AND a.id_area = i.id_area AND u.id = 4
 
-        $listareas = DB::select('SELECT a.name_area FROM areas a, users u, interests i WHERE u.id = i.id AND a.id_area = i.id_area AND u.id = '.$request->user()->id.'');
-        //$listareas = DB::select('SELECT a.name_area FROM areas a');
-        //return view('perfil');
-        return view("perfilAdmin", compact('listareas'));
-        //return $listareas;
+            $listareas = DB::select('SELECT a.name_area FROM areas a, users u, interests i WHERE u.id = i.id AND a.id_area = i.id_area AND u.id = '.$request->user()->id.'');
+            //$listareas = DB::select('SELECT a.name_area FROM areas a');
+            //return view('perfil');
+            return view("perfil", compact('listareas'));
+        }else{
+            echo 'Represetante';
+            //
+            $user = $request->user()->id;
+            //SELECT a.name_area FROM areas a, users u, interests i WHERE u.id = i.id AND a.id_area = i.id_area AND u.id = 4
+
+            $entity = DB::select('SELECT e.name_entity FROM users u, entities e  WHERE e.id_entity = u.id_entity and u.id = '.$request->user()->id.'');
+            $listareas = DB::select('SELECT a.name_area FROM areas a, users u, interests i WHERE u.id = i.id AND a.id_area = i.id_area AND u.id = '.$request->user()->id.'');
+            //$listareas = DB::select('SELECT a.name_area FROM areas a');
+            //return view('perfil');
+            return view("perfilr", compact('listareas','entity'));
+        }
     }
 
     public function showteaching(Request $request)

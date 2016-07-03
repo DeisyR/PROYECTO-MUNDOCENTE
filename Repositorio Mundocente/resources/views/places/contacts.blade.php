@@ -28,7 +28,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <h1><a href="../public/"><span>Mundocente</span></a></h1>
+                    <h1><a href="home"><span>Mundocente</span></a></h1>
                 </div>
                 <br>
                 <br>
@@ -37,7 +37,7 @@
                 <!--Inicio menu-->
                 <div class="collapse navbar-collapse" id="navegation-fm">
                     <ul class="nav navbar-nav">
-                        <li class=""><a href="../public/">Inicio</a></li>
+                        <li class="active"><a href="home">Inicio</a></li>
                         <li class="dropdown">
                             <a href="#"  class="dropdown-toggle" data-toggle="dropdown" role="button">Categorias <span class="caret"> </span>
                             </a>

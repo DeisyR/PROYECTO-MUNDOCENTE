@@ -11,5 +11,27 @@ class publication extends Model
 
     protected $fillable = [
         'id_publication',
+        'start_date',
+        'final_date',
     ];
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

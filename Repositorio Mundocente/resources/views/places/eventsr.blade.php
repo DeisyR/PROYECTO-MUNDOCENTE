@@ -182,7 +182,7 @@
         <div class="form-group{{ $errors->has('places') ? ' has-error' : '' }}">
             <label for="datee" class="col-md-3 control-label"></label>
             <div class="col-md-6">
-                <select class="col-md-12" name="places">
+                <select class="col-md-12" name="places" >
                     @foreach($listplaces as $place)
                         <option  value="{{$place->id_place}}">{{$place->name_place}}</option>
                     @endforeach
@@ -190,7 +190,7 @@
 
                 @if ($errors->has('datee'))
                     <span class="help-block">
-                                        <strong>{{ $errors->first('datee') }}</strong>
+                                        <strong>{{ $errors->first('places') }}</strong>
                                     </span>
                 @endif
             </div>

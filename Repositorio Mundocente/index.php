@@ -1,36 +1,35 @@
 <html>
 <head>
     <title>Mundocente</title>
-    <link rel="shortcut icon" href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="/images/mifavicon.png" />
+    <link rel="stylesheet" href="public/css/estilos.css">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="css/galeriaIndex.css">
-    <link rel="stylesheet" href="css/bootstrap-responsive.css">
-    <script  src="js/jquery.min.js"></script>
-    <script  src="js/bootstrap.js"></script>
-    <link rel="shortcut icon" href="Imagenes/LogMundocente-01.png" />
+    <link rel="stylesheet" href="public/css/galeriaIndex.css">
+    <link rel="stylesheet" href="public/css/bootstrap-responsive.css">
+    <script  src="public/js/jquery.min.js"></script>
+    <script  src="public/js/bootstrap.js"></script>
+    <link rel="shortcut icon" href="public/Imagenes/LogMundocente-01.png" />
 
     <!--File Galery-->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="public/css/custom.css" rel="stylesheet">
     <!-- Owl Carousel Assets -->
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="public/css/owl.carousel.css" rel="stylesheet">
+    <link href="public/css/owl.theme.css" rel="stylesheet">
     <!--Galery-->
-    <link href="css/Gale.css" rel="stylesheet">
-    <script src="js/Gale.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/jquery-1.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <link href="css/prettify.css" rel="stylesheet">
+    <link href="public/css/Gale.css" rel="stylesheet">
+    <script src="public/js/Gale.js" type="text/javascript" charset="utf-8"></script>
+    <script src="public/js/jquery-1.js"></script>
+    <script src="public/js/owl.carousel.js"></script>
+    <link href="public/css/prettify.css" rel="stylesheet">
 
 </head>
 
 <body>
-
 <header>
     <nav class="navbar navbar-inverse " role="navigation">
 
@@ -44,8 +43,8 @@
                 <span class="icon-bar"></span>
 
             </button>
-            <a href="home" class=" " >
-                <img src="img/LogMundocente.png" srcset="img/LogMundocente.png 768w" width="110">
+            <a href="public/home" class=" " >
+                <img src="public/img/LogMundocente.png" srcset="public/img/LogMundocente.png 768w" width="110">
             </a>
         </div>
 
@@ -58,9 +57,9 @@
             <ul class="nav navbar-nav navbar-center">
                 <li><a href=""></a></li>
                 <li><a href=""></a></li>
-                <li class="active"><a href="home">Inicio</a></li>
-                <li><a href="posts">Publicaciones</a></li>
-                <li><a href="contacs">Contactenos</a></li>
+                <li class="active"><a href="public/home">Inicio</a></li>
+                <li><a href="public/posts">Publicaciones</a></li>
+                <li><a href="public/contacs">Contactenos</a></li>
 
 
             </ul>
@@ -68,8 +67,8 @@
 
 
             <form action="" class="navbar-form navbar-right " role="search" style="margin-top:10px;">
-                <input type="button" class="btn " class="btn btn-boton" onclick= "self.location.href = 'login'" value="Iniciar Sección">
-                <input type="button" class="btn" onclick= "self.location.href = 'newuser'" value="Registrarse">
+                <input type="button" class="btn " class="btn btn-boton" onclick="window.location.href='public/login'" value="Iniciar Sección">
+                <input type="button" class="btn" onclick="window.location.href='public/register'" value="Registrarse">
 
             </form>
         </div>
@@ -84,12 +83,12 @@
             <div class="span12">
                 <div id="owl-demo" class="owl-carousel">
 
-                    <div class="item"><img src="img/fullimage1.jpg" alt="The Last of us"></div>
-                    <div class="item"><img src="img/fullimage2.jpg" alt="GTA V"></div>
-                    <div class="item"><img src="img/fullimage3.jpg" alt="Mirror Edge"></div>
-                    <div class="item"><img src="img/fullimage4.jpg" alt="The Last of us"></div>
-                    <div class="item"><img src="img/fullimage5.jpg" alt="GTA V"></div>
-                    <div class="item"><img src="img/fullimage6.jpg" alt="Mirror Edge"></div>
+                    <div class="item"><img src="public/img/fullimage1.jpg" alt="The Last of us"></div>
+                    <div class="item"><img src="public/img/fullimage2.jpg" alt="GTA V"></div>
+                    <div class="item"><img src="public/img/fullimage3.jpg" alt="Mirror Edge"></div>
+                    <div class="item"><img src="public/img/fullimage4.jpg" alt="The Last of us"></div>
+                    <div class="item"><img src="public/img/fullimage5.jpg" alt="GTA V"></div>
+                    <div class="item"><img src="public/img/fullimage6.jpg" alt="Mirror Edge"></div>
 
                 </div>
             </div>
@@ -104,7 +103,7 @@
     <p align=justify>
         &nbsp; &nbsp;&nbsp;Para poder ver mas información de tu interes con respecto
     <p align=justify>&nbsp;&nbsp;&nbsp;&nbsp;a convocatorias , revistas se tiene que registrar en la pagina.</p>
-    <a class="sabias" ><img src="img/sabiasQ.png" ><img></a>
+    <a class="sabias" ><img src="public/img/sabiasQ.png" ><img></a>
 
 
 
@@ -196,7 +195,7 @@
 
 </div>
 <div class="corpo">
-    <a  width="40"><img src="img/corpo.png" ><img></a>
+    <a  width="40"><img src="public/img/corpo.png" ><img></a>
 </div>
 
 </br>
@@ -223,6 +222,12 @@
 </br>
 </br>
 </br>
+<!--Pagination-->
+<div id="cambiopagina">
+
+
+
+
 
     <!--Footer-->
     <script src="http://maps.google.com/maps/api/js?sensor=false&callback=iniciar">
@@ -280,6 +285,9 @@
                         <span class="fa fa-linkedin"></span>
                     </a>
 
+
+                    </ul>
+
                     <br>
                     <br>
                     <br>
@@ -308,11 +316,11 @@
             var time = 7; // time in seconds
 
             var $progressBar,
-                    $bar,
-                    $elem,
-                    isPause,
-                    tick,
-                    percentTime;
+                $bar,
+                $elem,
+                isPause,
+                tick,
+                percentTime;
 
             //Init the carousel
             $("#owl-demo").owlCarousel({
@@ -390,5 +398,6 @@
     </script>
 
 </body>
+
 
 </html>
