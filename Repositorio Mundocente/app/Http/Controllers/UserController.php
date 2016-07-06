@@ -139,7 +139,7 @@ class UserController extends Controller
             $listevents = DB::select('SELECT users.name, interests.id_area, publications.name_publication, publications.id_publication, publications.description, affinities.id_area FROM users, interests, areas, affinities, publications WHERE users.id = interests.id && areas.id_area = interests.id_area && areas.id_area = affinities.id_area && publications.id_publication = affinities.id_publication && users.id = ' . $request->user()->id . ' && publications.type_publication = "Evento"');
             $listcalls = DB::select('SELECT users.name, interests.id_area, publications.name_publication, publications.id_publication, publications.description, affinities.id_area FROM users, interests, areas, affinities, publications WHERE users.id = interests.id && areas.id_area = interests.id_area && areas.id_area = affinities.id_area && publications.id_publication = affinities.id_publication && users.id = ' . $request->user()->id . ' && publications.type_publication = "Convocatoria"');
             $listjournals = DB::select('SELECT users.name, interests.id_area, publications.name_publication, publications.id_publication, publications.description, affinities.id_area FROM users, interests, areas, affinities, publications WHERE users.id = interests.id && areas.id_area = interests.id_area && areas.id_area = affinities.id_area && publications.id_publication = affinities.id_publication && users.id = ' . $request->user()->id . ' && publications.type_publication = "Revista"');
-            echo 'n_n';
+
             //$collection = array_last($listevents, $listcalls, $listjournals);
             //return 'No es Admin';
             return view("places.teaching", compact('listevents', 'listcalls', 'listjournals'));
@@ -166,7 +166,7 @@ class UserController extends Controller
         $listareas = DB::select('SELECT * FROM `areas`');
         //$listareas = DB::select('SELECT a.id_area, a.name_area FROM areas a, users u, interests i WHERE u.id = i.id AND a.id_area = i.id_area AND u.id = '.$request->user()->id);
 
-        return view("places.newperson",compact('listentities'),compact('listareas'));
+        return view("places.newperson",compact('listentities','listareas'));
     }
     /**
      * Show the form for editing the specified resource.

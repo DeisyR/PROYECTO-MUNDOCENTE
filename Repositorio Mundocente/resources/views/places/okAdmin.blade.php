@@ -1,40 +1,54 @@
-@extends('layouts.defaultAdmin')
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+@extends('layouts.default0')
 
-<link rel="stylesheet" href="css/bootstrap.css">
-<title> Mundocente</title>
+<link rel="stylesheet" href="css/estilos.css" xmlns="http://www.w3.org/1999/html">
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/estilos.css">
-<link rel="stylesheet" href="css/galeria.css">
+
+<link rel="stylesheet" href="css/galeriaIndex.css">
 <link rel="stylesheet" href="css/bootstrap-responsive.css">
 <script  src="js/jquery.min.js"></script>
 <script  src="js/bootstrap.js"></script>
-<!--Tab-->
-<link href="css/controltab.css" rel="stylesheet">
-<script src="js/prefixfree.min.js"></script>
+<link rel="shortcut icon" href="Imagenes/LogMundocente-01.png" />
+
+<!--File Galery-->
+<link href="css/custom.css" rel="stylesheet">
+<!-- Owl Carousel Assets -->
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/owl.theme.css" rel="stylesheet">
+<!--Galery-->
+<link href="css/Gale.css" rel="stylesheet">
+<script src="js/Gale.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery-1.js"></script>
+<script src="js/owl.carousel.js"></script>
+<link href="css/prettify.css" rel="stylesheet">
 
 @section('content')
     <header>
-        <nav class="navbar navbar-inverse navbar-static-top " role="navigation">
-            <div class="container">
-                <div class="navbar-header">
+        <nav class="navbar navbar-inverse " role="navigation">
 
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegation-fm">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-1">
+                    <span class="sr-only">Desplegar navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
 
-                        <span class="sr-only">Desplegar / Ocultar Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <h1><a href="index.html"><span>Mundocente</span></a></h1>
+                </button>
+                <a href="home" class=" " >
+                    <img src="img/LogMundocente.png" srcset="img/LogMundocente.png 768w" width="110">
+                </a>
+            </div>
+
+            </br></br>
 
 
-
-
-                    <!--Inicio menu-->
-                    <div class="collapse navbar-collapse" id="navegation-fm">
-                        <ul class="nav navbar-nav">
+            <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+                 otro elemento que se pueda ocultar al minimizar la barra -->
+            <div class="collapse navbar-collapse navbar-1">
+                <ul class="nav navbar-nav navbar-center">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
                             <li ><a href="home">Inicio</a></li>
                             <li><a href="perfilAdmin">Perfil</a></li>
                             <li><a href="publicationsAdmin">Publicaciones</a></li>
@@ -53,6 +67,8 @@
         </nav>
     </header>
 
+    </br></br>
+    </br></br>
     <main>
         <div class="alert alert-success">
             <br>
@@ -67,9 +83,10 @@
         </div>
     </main>
 
-    <br>
-    <br>
-    <br>
+    </br></br>
+    </br></br>
+    </br>
+
     <!--Footer-->
     <script src="http://maps.google.com/maps/api/js?sensor=false&callback=iniciar">
     </script>

@@ -36,6 +36,12 @@ class IndexController extends Controller
         //return 'indexD' ;
     }
 
+    public function contactExt()
+    {
+        return view('places.contactsExt');
+        //return 'indexD' ;
+    }
+
     /**
      * Show the form for creating a new resource.
      *

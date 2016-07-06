@@ -9,25 +9,32 @@
 @section('content')
 
     <header>
-        <nav class="navbar navbar-inverse navbar-static-top " role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegation-fm">
+        <nav class="navbar navbar-inverse " role="navigation">
 
-                        <span class="sr-only">Desplegar / Ocultar Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <h1><a href="home"><span>Mundocente</span></a></h1>
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <!--Inicio menu-->
-                <div class="collapse navbar-collapse" id="navegation-fm">
-                    <ul class="nav navbar-nav">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-1">
+                    <span class="sr-only">Desplegar navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                </button>
+                <a href="home" class=" " >
+                    <img src="img/LogMundocente.png" srcset="img/LogMundocente.png 768w" width="110">
+                </a>
+            </div>
+
+            </br>
+            </br>
+
+            <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+                 otro elemento que se pueda ocultar al minimizar la barra -->
+            <div class="collapse navbar-collapse navbar-1">
+                <ul class="nav navbar-nav navbar-center">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
                         <li class=""><a href="home">Inicio</a></li>
                         <li class="dropdown">
                             <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button">Categorias <span class="caret"> </span>

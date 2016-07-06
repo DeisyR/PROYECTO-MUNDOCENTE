@@ -45,20 +45,3 @@
 	font-size: 1.3em;
 	color: rgb(100, 100, 100);
 }
-<<<<<<< HEAD
-=======
-
-.google-maps {
-position: relative;
-padding-bottom: 15%; // This is the aspect ratio
-height: 0;
-overflow: hidden;
-}
-.google-maps iframe {
-position: absolute;
-top: 0;
-left: 0;
-width: 10% !important;
-height: 10% !important;
-}
->>>>>>> origin/master

@@ -1,55 +1,61 @@
-@extends('layouts.default1')
+@extends('layouts.default0')
 
-<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/estilos.css" xmlns="http://www.w3.org/1999/html">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link rel="stylesheet" href="css/galeriaIndex.css">
+<link rel="stylesheet" href="css/bootstrap-responsive.css">
+<script  src="js/jquery.min.js"></script>
+<script  src="js/bootstrap.js"></script>
 <link rel="shortcut icon" href="Imagenes/LogMundocente-01.png" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Your description here">
-<meta name="author" content="Your Name">
-<title>Learning Boostrap</title>
 
-<!-- Bootstrap CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="css/basic-template.css" rel="stylesheet" />
-
-<!-- BootstrapValidator CSS -->
-<link href="css/bootstrapValidator.min.css" rel="stylesheet"/>
-
-<!-- jQuery and Bootstrap JS -->
-<script src="js/jquery.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
-
-<!-- BootstrapValidator -->
-<script src="js/bootstrapValidator.min.js" type="text/javascript"></script>
-<link rel="stylesheet" href="css/acordeon.css">
+<!--File Galery-->
+<link href="css/custom.css" rel="stylesheet">
+<!-- Owl Carousel Assets -->
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/owl.theme.css" rel="stylesheet">
+<!--Galery-->
+<link href="css/Gale.css" rel="stylesheet">
+<script src="js/Gale.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery-1.js"></script>
+<script src="js/owl.carousel.js"></script>
+<link href="css/prettify.css" rel="stylesheet">
 
 @section('content')
 
         <!--Route::resource('task','PlaceController/'64'/create');-->
-<h1>Crear Usuario</h1>
+
 
 <header>
-    <nav class="navbar navbar-inverse navbar-static-top " role="navigation">
-        <div class="container">
-            <div class="navbar-header">
+    <nav class="navbar navbar-inverse " role="navigation">
 
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegation-fm">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-1">
+                <span class="sr-only">Desplegar navegación</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
 
-                    <span class="sr-only">Desplegar / Ocultar Menu</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <h1><a href="index.html"><span>Mundocente</span></a></h1>
+            </button>
+            <a href="home" class=" " >
+                <img src="img/LogMundocente.png" srcset="img/LogMundocente.png 768w" width="110">
+            </a>
+        </div>
+
+        </br></br>
 
 
-
-
-                <!--Inicio menu-->
-                <div class="collapse navbar-collapse" id="navegation-fm">
-                    <ul class="nav navbar-nav">
+        <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+             otro elemento que se pueda ocultar al minimizar la barra -->
+        <div class="collapse navbar-collapse navbar-1">
+            <ul class="nav navbar-nav navbar-center">
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
                         <li ><a href="home">Inicio</a></li>
                         <li><a href="perfilr">Perfil</a></li>
+                        <li><a href="teachingr">Mis Publicaciones</a></li>
                         <li><a href="eventsr">Eventos</a></li>
                         <li><a href="callsr">Convocatorias</a></li>
                         <li><a href="journalsr">revistas</a></li>
@@ -57,24 +63,14 @@
                         </li>
 
                     </ul>
+            <form action="" class="navbar-form navbar-right " role="search" style="margin-top:10px;">
+                <input type="button" class="btn " class="btn btn-boton" onclick= "self.location.href='{{ url('/logout') }}'" value="Cerrar Sección">
+                <!--input type="button" class="btn" onclick= "self.location.href = 'newuser'" value="Registrarse"-->
+
+            </form>
                 </div>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <form action="" class="navbar-form navbar-right " role="search" style="margin-top:10px;">
-                <input type="button" class="btn " class="btn btn-boton" onclick= "self.location.href = 'login.html'" value="Iniciar Sección">
-                <input type="button" class="btn" onclick= "self.location.href = 'Registro.html'" value="Registrarse">
-                <br>
-                <br>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Buscar">
-                </div>
-                <button type="submit" class="btn ">
-                    <span class="glyphicon glyphicon-search"></span>
-                </button>
-            </form>
+
 
 
         </div>
@@ -82,6 +78,9 @@
     </nav>
 
 </header>
+</br></br>
+</br></br>
+</br></br>
 
 <div class="container">
 
@@ -91,7 +90,7 @@
         <br>
         <br>
 
-        <strong>n_n!</strong> Los registros fueron almacenados satisfactoriamente
+        <strong>!</strong> Los registros fueron almacenados satisfactoriamente
         <br>
         <br>
         <br>
@@ -101,6 +100,10 @@
 </div>
 
 
+</br></br>
+</br></br>
+</br></br>
+</br>
 
 <!--Formulariooooooooo n_n -->
 
@@ -151,10 +154,6 @@
 
                 </ul>
 
-                <br>
-                <br>
-                <br>
-
 
             </div>
 
@@ -170,6 +169,7 @@
             </div>
         </div>
     </div>
+    </footer>
 
 
 

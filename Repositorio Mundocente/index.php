@@ -59,15 +59,13 @@
                 <li><a href=""></a></li>
                 <li class="active"><a href="public/home">Inicio</a></li>
                 <li><a href="public/posts">Publicaciones</a></li>
-                <li><a href="public/contacs">Contactenos</a></li>
+                <li><a href="public/contacsExt">Contactenos</a></li>
 
 
             </ul>
 
-
-
             <form action="" class="navbar-form navbar-right " role="search" style="margin-top:10px;">
-                <input type="button" class="btn " class="btn btn-boton" onclick="window.location.href='public/login'" value="Iniciar Sección">
+                <input type="button" class="btn " class="btn btn-boton" onclick="window.location.href='public/login'" value="Iniciar Sesión">
                 <input type="button" class="btn" onclick="window.location.href='public/register'" value="Registrarse">
 
             </form>
@@ -76,6 +74,7 @@
     </nav>
 
 </header>
+<br>
 <!--Galery-->
 <div id="demo">
     <div class="container">
@@ -96,21 +95,25 @@
     </div>
 </div>
 
-
-<div class="inNota">
+<div class="inNota1">
 
     <h4 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¿Sabías que?</h4>
     <p align=justify>
         &nbsp; &nbsp;&nbsp;Para poder ver mas información de tu interes con respecto
-    <p align=justify>&nbsp;&nbsp;&nbsp;&nbsp;a convocatorias , revistas se tiene que registrar en la pagina.</p>
-    <a class="sabias" ><img src="public/img/sabiasQ.png" ><img></a>
+    <p align=justify>&nbsp;&nbsp;&nbsp;&nbsp;a convocatorias , revistas se tiene </p>
+    <p align=justify>&nbsp;&nbsp;&nbsp;&nbsp;que registrar en la pagina.</p>
+    <a class="sabias" ><img class="img-responsive" src="public/img/sabiasQ.png" ><img></a>
 
 
 
 </div>
 
-<div class="todo">
-    <br>
+<br>
+<br>
+
+<div class="container">
+
+    <div class="row">
     <div class="col-sm-4">
         <div class="panel panel-danger">
             <div class="panel-heading">
@@ -194,34 +197,20 @@
     </div>
 
 </div>
-<div class="corpo">
-    <a  width="40"><img src="public/img/corpo.png" ><img></a>
+</div>
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <a ><img class="img-responsive" src="public/img/corpo.png" ><img></a>
+        </div>
+    </div>
 </div>
 
 </br>
 </br>
 </br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br></br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+
 <!--Pagination-->
 <div id="cambiopagina">
 
@@ -251,13 +240,13 @@
     <footer class="text-center">
         <div class="footer-above">
             <div class="container">
-                <div class="footer-col col-md-8">
+                <div class="footer-col col-md-8 google-maps">
                     <h3><a>Localización</a></h3>
 
 
 
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.101396505633!2d-73.35884268549873!3d5.55198433523435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a7c3d644e3cd9%3A0x3c1e6f4e767244da!2sUPTC%2C+Universidad+Pedag%C3%B3gica+y+Tecnol%C3%B3gica+de+Colombia!5e0!3m2!1ses-419!2sco!4v1460729797782" width="400" height="180" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    <hr width=150%  align=left>
+                    <!--hr width=150%  align=left-->
                 </div>
                 <div class="footer-col col-md-4">
 

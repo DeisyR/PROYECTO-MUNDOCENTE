@@ -18,56 +18,39 @@
 @section('content')
 
     <header>
-        <nav class="navbar navbar-inverse navbar-static-top " role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegation-fm">
+        <nav class="navbar navbar-inverse " role="navigation">
 
-                        <span class="sr-only">Desplegar / Ocultar Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <h1><a href="home"><span>Mundocente</span></a></h1>
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <!--Inicio menu-->
-                <div class="collapse navbar-collapse" id="navegation-fm">
-                    <ul class="nav navbar-nav">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-1">
+                    <span class="sr-only">Desplegar navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                </button>
+                <a href="home" class=" " >
+                    <img src="img/LogMundocente.png" srcset="img/LogMundocente.png 768w" width="110">
+                </a>
+            </div>
+
+            </br>
+            </br>
+
+            <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+                 otro elemento que se pueda ocultar al minimizar la barra -->
+            <div class="collapse navbar-collapse navbar-1">
+                <ul class="nav navbar-nav navbar-center">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
                         <li class="active"><a href="home">Inicio</a></li>
-                        <li class="dropdown">
-                            <a href="#"  class="dropdown-toggle" data-toggle="dropdown" role="button">Categorias <span class="caret"> </span>
-                            </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="calls">Convocatorias</a></li>
-                                <li><a href="journals">Revistas</a></li>
-                                <li><a href="events">Eventos</a></li>
-
-                            </ul>
-                        </li>
+                        <li><a href="perfil">Perfil</a></li>
                         <li><a href="contacts">Contactenos</a></li>
                         </li>
                     </ul>
                 </div>
 
-                <form action="" class="navbar-form navbar-right" role="search">
-                    <div >
-
-                    </div>
-                    <button type="submit" class="btn " class="btn btn-boton">Iniciar Sección</button>
-                    <button type="submit" class="btn ">Registrarse</button>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Buscar">
-                    </div>
-                    <button type="submit" class="btn ">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
-
-
-                </form>
             </div>
 
 
@@ -105,64 +88,85 @@
         </div>
     </div>
 
+    <!--Footer-->
+    <script src="http://maps.google.com/maps/api/js?sensor=false&callback=iniciar">
+    </script>
+
+    <script>
+        function iniciar() {
+            var mapOptions = {
+                center: new google.maps.LatLng(25.80, -80.30),
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP};
+            var map = new google.maps.Map(document.getElementById("map"),mapOptions);}
+    </script>
+
+    <div id="map"></div>
+
+
+
+
+
     <footer class="text-center">
         <div class="footer-above">
             <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3><a>Location</a></h3>
-                        <p>Mundocente emprendimiento APPs<br>Tunja</p>
-                        <br>
-                        <hr width=100%  align=left>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3><a>Around the Web</a></h3>
-                        <ul class="list-inline">
-                            <!-- some social networks -->
+                <div class="footer-col col-md-8 google-maps">
+                    <h3><a>Localización</a></h3>
 
-                            <a class="btn btn-social-icon btn-twitter">
-                                <span class="fa fa-twitter"></span>
-                            </a>
-
-                            <a class="btn btn-social-icon btn-facebook">
-                                <span class="fa fa-facebook"></span>
-                            </a>
-
-                            <a class="btn btn-social-icon btn-github">
-                                <span class="fa fa-github"></span>
-                            </a>
-
-                            <a class="btn btn-social-icon btn-google">
-                                <span class="fa fa-fw fa-google-plus"></span>
-                            </a>
+                    <!--hr width=150%  align=left-->
 
 
-                        </ul>
-                        <br>
-                        <br>
-                        <hr width=100%  align=left>
-
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3><a>Hacerca de Mundocente</a></h3>
-                        <p>Proyecto de emprendimiento que ayuda a maestros a realizar y consultar que eventos,convocatorias y  revistas se encuentran realizandoce o se estan realizando.<a href="http://http://mundocente.co/">Oficial Mundocente</a>.</p>
-                        <hr width=100%  align=left>
-                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.101396505633!2d-73.35884268549873!3d5.55198433523435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a7c3d644e3cd9%3A0x3c1e6f4e767244da!2sUPTC%2C+Universidad+Pedag%C3%B3gica+y+Tecnol%C3%B3gica+de+Colombia!5e0!3m2!1ses-419!2sco!4v1460729797782" width="400" height="180" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
+                <div class="footer-col col-md-4">
+
+                    <h3><a>Mundocente</a></h3>
+                    <p>Red de docentes universitarios interesados </p>
+                    <p>en compartir información sobre convocatorias </p>
+                    <p>docentes, revistas científicas, eventos académicos</p>
+                    <p> y mucho más.</p>
+
+                    </br>
+                    <a class="btnn btn btn-social-icon btn-twitter" href="http://http://mundocente.co/">
+                        <span class="fa fa-twitter" href="https://twitter.com/mundocente"></span>
+                    </a>
+                    <a href=""></a>
+                    <a class="btnn btn btn-social-icon btn-facebook" href="https://www.facebook.com/mundocente/?fref">
+                        <span class="fa fa-facebook"></span>
+                    </a>
+
+                    <a class="btnn btn btn-social-icon btn-envelope  " href="#">
+                        <span class="fa fa-envelope"></span>
+                    </a>
+
+
+                    <a class="btnn btn btn-social-icon btn-linkedin  " href="https://co.linkedin.com/in/pattyavella">
+                        <span class="fa fa-linkedin"></span>
+                    </a>
+
+
+                    </ul>
+
+                    <br>
+                    <br>
+                    <br>
+
+
+                </div>
+
             </div>
 
         </div>
         <div class="footer-below">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Grupo de desarrollo EAM
+                    <div class="2">
+                        Copyright &copy; Grupo de desarrollo 4<?php echo date("Y"); ?>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
 
 
 @stop

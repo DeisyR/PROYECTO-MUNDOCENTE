@@ -1,4 +1,4 @@
-@extends('layouts.defaultpp')
+@extends('layouts.default')
 
 <link rel="stylesheet" href="css/estilos.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -25,52 +25,55 @@
 @section('content')
 
     <header>
-       <nav class="navbar navbar-inverse " role="navigation">
+        <nav class="navbar navbar-inverse " role="navigation">
 
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse"
-            data-target=".navbar-1">
-      <span class="sr-only">Desplegar navegación</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-1">
+                    <span class="sr-only">Desplegar navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
 
-    </button>
-    <a href="home" class=" " >
-    <img src="img/LogMundocente.png" srcset="img/LogMundocente.png 768w" width="110">
-    </a>
-  </div>
- 
- </br>
-  </br>
-  
-  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
-       otro elemento que se pueda ocultar al minimizar la barra -->
-  <div class="collapse navbar-collapse navbar-1">
-    <ul class="nav navbar-nav navbar-center">
+                </button>
+                <a href="home" class=" " >
+                    <img src="img/LogMundocente.png" srcset="img/LogMundocente.png 768w" width="110">
+                </a>
+            </div>
+
+            </br>
+            </br>
+
+            <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+                 otro elemento que se pueda ocultar al minimizar la barra -->
+            <div class="collapse navbar-collapse navbar-1">
+                <ul class="nav navbar-nav navbar-center">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
                             <li ><a href="home">Inicio</a></li>
                             <li><a href="perfilr">Perfil</a></li>
                             <li><a href="teachingr">Mis Publicaciones</a></li>
                             <li><a href="eventsr">Eventos</a></li>
                             <li><a href="callsr">Convocatorias</a></li>
                             <li><a href="journalsr">revistas</a></li>
-                            <li><a href="contacsr">Contactenos</a></li>
+                            <li><a href="contacs">Contactenos</a></li>
+                            </li>
 
+                        </ul>
+                <form action="" class="navbar-form navbar-right " role="search" style="margin-top:10px;">
+                    <input type="button" class="btn " class="btn btn-boton" onclick= "self.location.href='{{ url('/logout') }}'" value="Cerrar Sección">
 
-                       
-    </ul>
-
-   
- 
-   <form action="" class="navbar-form navbar-right " role="search" style="margin-top:10px;">
-                    <input type="button" class="btn " class="btn btn-boton" onclick= "self.location.href = 'login'" value="Iniciar Sección">
-                    <input type="button" class="btn" onclick= "self.location.href = 'newuser'" value="Registrarse">
-                                    
                 </form>
-  </div>
- </div>
-</nav>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </nav>
     </header>
         <!--Galery-->
         <div id="demo">
@@ -86,13 +89,13 @@
                                             <div class="col-sm-5">
 
                                                 <div class="panel panel-default">
-                                                    <div class="thumbnail"><img src="img\perfil\33787.png" srcset=" img\perfil\33787.png 768w"class="img-circle pull"></div>
+                                                    <div class="thumbnail"><img src="img\perfil\33787.png" class="img-circle pull"></div>
                                                     <div class="panel-body">
                                                         <p class="lead">Nombre de Representante</p>
                                                         <p>{{ Auth::user()->name}} {{ Auth::user()->lastname}}</p>
 
                                                         <p>
-                                                            <img src="https://lh3.googleusercontent.com/uFp_tsTJboUY7kue5XAsGA=s28" srcset="https://lh3.googleusercontent.com/uFp_tsTJboUY7kue5XAsGA=s28 768w" width="28px" height="28px">
+                                                            <img src="https://lh3.googleusercontent.com/uFp_tsTJboUY7kue5XAsGA=s28" width="28px" height="28px">
                                                         </p>
                                                     </div>
                                                 </div>
@@ -127,7 +130,7 @@
                                                 <div class="panel panel-default">
                                                     <div class="panel-heading"> <h4>Email</h4></div>
                                                     <div class="panel-body">
-                                                        <p><img src="img\perfil\emailsmall.png" srcset="img\perfil\emailsmall.png 768w" class="img-circle pull-right"> <br>{{ Auth::user()->email}}</p>
+                                                        <p><img src="img\perfil\emailsmall.png" class="img-circle pull-right"> <br>{{ Auth::user()->email}}</p>
                                                         <p><br>{{ Auth::user()->password}}</p>
                                                         <div class="clearfix"></div>
                                                         <hr>
@@ -162,7 +165,7 @@
 
 
 
-<!--Footer-->
+    <!--Footer-->
     <script src="http://maps.google.com/maps/api/js?sensor=false&callback=iniciar">
     </script>
 
@@ -180,16 +183,17 @@
 
 
 
+
     <footer class="text-center">
         <div class="footer-above">
             <div class="container">
                 <div class="footer-col col-md-8 google-maps">
                     <h3><a>Localización</a></h3>
 
+                    <!--hr width=150%  align=left-->
 
 
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.101396505633!2d-73.35884268549873!3d5.55198433523435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a7c3d644e3cd9%3A0x3c1e6f4e767244da!2sUPTC%2C+Universidad+Pedag%C3%B3gica+y+Tecnol%C3%B3gica+de+Colombia!5e0!3m2!1ses-419!2sco!4v1460729797782" width="400" height="180" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    
                 </div>
                 <div class="footer-col col-md-4">
 
@@ -198,8 +202,8 @@
                     <p>en compartir información sobre convocatorias </p>
                     <p>docentes, revistas científicas, eventos académicos</p>
                     <p> y mucho más.</p>
-</br>
-</br>
+
+                    </br>
                     <a class="btnn btn btn-social-icon btn-twitter" href="http://http://mundocente.co/">
                         <span class="fa fa-twitter" href="https://twitter.com/mundocente"></span>
                     </a>
@@ -220,6 +224,11 @@
 
                     </ul>
 
+                    <br>
+                    <br>
+                    <br>
+
+
                 </div>
 
             </div>
@@ -229,13 +238,11 @@
             <div class="container">
                 <div class="row">
                     <div class="2">
-                    <hr width=100%  align=left>
                         Copyright &copy; Grupo de desarrollo 4<?php echo date("Y"); ?>
                     </div>
                 </div>
             </div>
         </div>
-
     </footer>
 
 

@@ -17,7 +17,7 @@ class PublicationController extends Controller
         Carbon::setLocale('es');
     }
 
-    protected function validator(array $data)
+    /*protected function validator(array $data)
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
@@ -36,7 +36,7 @@ class PublicationController extends Controller
             'password.min' => 'La contraseña debe ser de minimo 6 caracteres',
             'password.confirmed' => 'Debe confirmar la contraseña',
         ]);
-    }
+    }*/
 
     /**
      * Display a listing of the resource.
@@ -46,7 +46,6 @@ class PublicationController extends Controller
     public function index()
     {
         //
-        echo 'Entro n_n';
     }
 
     public function indexevents()
@@ -57,7 +56,6 @@ class PublicationController extends Controller
         //$listpublications = DB::table('publications')->paginate(3);
         $listpublications = publication::where('type_publication', '=', 'Evento')->paginate(3);
 
-        echo 'n_n';
         //return view('places.events', compact('listpublications'));
         return view('places.events', ['listpublications' => $listpublications]);
         //return view('places.events');
@@ -171,10 +169,10 @@ class PublicationController extends Controller
         $place = $request->input("places");
 
         DB::table('publications')->insert(
-            ['name_publication' => '"' . $title . '"',
-                'description' => '"' . $descrip . '"',
-                'link_publication' => '"' . $link . '"',
-                'mail_responsable' => '"' . $email . '"',
+            ['name_publication' =>  $title,
+                'description' => $descrip,
+                'link_publication' => $link,
+                'mail_responsable' => $email,
                 'start_date' => $dates,
                 'final_date' => $datee,
                 'type_publication' => $event,
@@ -249,6 +247,7 @@ class PublicationController extends Controller
             );
         }
 
+        return redirect('Success');
     }
 
     public function addjournals(Request $request)
@@ -294,6 +293,7 @@ class PublicationController extends Controller
             );
         }
 
+        return redirect('Success');
     }
 
 
@@ -310,10 +310,9 @@ class PublicationController extends Controller
             'descrip' => 'required|max:255',
             //'link' => 'required|max:255',
             'email' => 'required|max:255',
-            'dates' => 'required|max:255',
-            'datee' => 'required|max:255',
+            'dates' => 'required',
+            //'datee' => 'required',
             'areas' => 'required',
-            '' => 'required',
             //'lastname' => 'required|max:255',
 
         ],[
@@ -324,7 +323,6 @@ class PublicationController extends Controller
             'email.required'  => 'Debe digitar el correo',
             'email.max' => 'El correo tiene una maximo 255 caracteres',
             'dates.required'  => 'Debe digitar la fecha de inicio',
-            'dates.max' => 'la fecha de inicio tiene una maximo 255 caracteres',
             'areas.required'=>'La Area no se a seleccionado'
         ]);
         //Flash::success("Se ha registrado el usuario de manera exitosa!");

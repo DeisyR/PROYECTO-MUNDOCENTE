@@ -22,6 +22,7 @@ Route::get('/', function () {
 
 Route::auth();
 
+Route::get('pru', 'HomeController@pru');
 Route::get('home', 'IndexController@index');
 Route::get('/indexD', 'IndexController@index');
 Route::get('/index', 'IndexController@index');
@@ -29,6 +30,7 @@ Route::get('/index', 'IndexController@index');
 Route::get('', 'HomeController@login');
 Route::get('/', 'HomeController@login');
 Route::match(["get","post"],'contacs', 'IndexController@contact');
+Route::match(["get","post"],'contacsExt', 'IndexController@contactExt');
 
 Route::get('/placeurl', 'PlaceController@creat');
 
@@ -85,6 +87,10 @@ Route::match(["get","post"],"perfilr", "RepresentanteController@showInfo");
 Route::match(["get","post"],"newuserr", "RepresentanteController@showview");
 Route::match(["get","post"],"createuserr", "RepresentanteController@store");
 Route::match(["get","post"],"teachingr", "RepresentanteController@showteaching");
+Route::match(["get","post"],"edit/{id}", "RepresentanteController@editt");
+//Route::match(["get","post"],"editt", "RepresentanteController@editt");
+Route::match(["get","post"],"addEdit", "RepresentanteController@addedit");
+Route::match(["get","post"],"search", "RepresentanteController@search");
 
 Route::get('eventsr','PublicationController@indexeventsr');
 Route::get('callsr','PublicationController@indexcallsr');

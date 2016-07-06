@@ -3,8 +3,8 @@ a {color:#b14791}
 .inNota {
 	position: absolute;
 	background-color: #b14791;
-    margin-left: 800px;
-   top: 135px;
+    margin-left: 730px;
+   top: 155px;
    width: 430px;
    height: 260px;
    font-family:'Asap', sans-serif;
@@ -13,6 +13,20 @@ a {color:#b14791}
 border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
 
 	}
+
+.inNota1 {
+	position: absolute;
+	background-color: #b14791;
+	margin-left: 780px;
+	top: 155px;
+	width: 430px;
+	height: 260px;
+	font-family:'Asap', sans-serif;
+	font-size: 15px;
+	color: #030303;
+	border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+
+}
 .corpo{
 	position: absolute;
 
@@ -121,3 +135,16 @@ hr{
 	color: #fff;
 }
 
+.google-maps {
+	position: relative;
+	padding-bottom: 15%; // This is the aspect ratio
+height: 0;
+	overflow: hidden;
+}
+.google-maps iframe {
+	position: absolute;
+	top: 70;
+	left: 40;
+	width: 90% !important;
+	height: 70% !important;
+}

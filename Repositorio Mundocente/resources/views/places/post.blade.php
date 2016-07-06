@@ -42,9 +42,8 @@
                         <li><a href=""></a></li>
                         <li><a href=""></a></li>
                         <li class="active"><a href="home">Inicio</a></li>
-                        <li><a href="perfil">Perfil</a></li>
                         <li><a href="posts">Publicaciones</a></li>
-                        <li><a href="contacs">Contactenos</a></li>
+                        <li><a href="contacsExt">Contactenos</a></li>
 
 
                     </ul>
@@ -89,9 +88,7 @@
                                 <p>{{$event->description}}</p>
                             </div>
                             <div class="panel-footer text-center">
-                                <a href="#download"><span class="glyphicon glyphicon-download"></span></a>
-                                <a href="#facebook"><span class="fa fa-facebook"></span></a>
-                                <a href="#twitter"><span class="fa fa-twitter"></span></a>
+
                                 <a href="#share"><span class="glyphicon glyphicon-share-alt"></span></a>
                             </div>
                         </div>
@@ -116,9 +113,7 @@
                                 <p>{{$call->description}}</p>
                             </div>
                             <div class="panel-footer text-center">
-                                <a href="#download"><span class="glyphicon glyphicon-download"></span></a>
-                                <a href="#facebook"><span class="fa fa-facebook"></span></a>
-                                <a href="#twitter"><span class="fa fa-twitter"></span></a>
+
                                 <a href="#share"><span class="glyphicon glyphicon-share-alt"></span></a>
                             </div>
                         </div>
@@ -142,9 +137,7 @@
                                 <p>{{$journals->description}}</p>
                             </div>
                             <div class="panel-footer text-center">
-                                <a href="#download"><span class="glyphicon glyphicon-download"></span></a>
-                                <a href="#facebook"><span class="fa fa-facebook"></span></a>
-                                <a href="#twitter"><span class="fa fa-twitter"></span></a>
+
                                 <a href="#share"><span class="glyphicon glyphicon-share-alt"></span></a>
                             </div>
                         </div>

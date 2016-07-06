@@ -29,6 +29,11 @@ class HomeController extends Controller
         //return 'indexD' ;
     }
 
+    public function pru()
+    {
+        return view('places.okAdmin');
+    }
+
     public function home()
     {
         return view('home');

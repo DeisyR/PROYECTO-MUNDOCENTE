@@ -1,55 +1,52 @@
-@extends('layouts.defaultr')
+@extends('layouts.default')
 
 <link rel="stylesheet" href="css/acordeon.css">
 @section('content')
     <header>
-        <nav class="navbar navbar-inverse navbar-static-top " role="navigation">
-            <div class="container">
-                <div class="navbar-header">
+        <nav class="navbar navbar-inverse " role="navigation">
 
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegation-fm">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-1">
+                    <span class="sr-only">Desplegar navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
 
-                        <span class="sr-only">Desplegar / Ocultar Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <h1><a href="index.html"><span>Mundocente</span></a></h1>
+                </button>
+                <a href="home" class=" " >
+                    <img src="img/LogMundocente.png" srcset="img/LogMundocente.png 768w" width="110">
+                </a>
+            </div>
 
+            </br>
+            </br>
 
-
-
-                    <!--Inicio menu-->
-                    <div class="collapse navbar-collapse" id="navegation-fm">
-                        <ul class="nav navbar-nav">
+            <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+                 otro elemento que se pueda ocultar al minimizar la barra -->
+            <div class="collapse navbar-collapse navbar-1">
+                <ul class="nav navbar-nav navbar-center">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
                             <li ><a href="home">Inicio</a></li>
                             <li><a href="perfilr">Mi Perfil</a></li>
                             <li><a href="teachingr">Mis Publicaciones</a></li>
                             <li><a href="eventsr">Eventos</a></li>
                             <li><a href="callsr">Convocatorias</a></li>
                             <li><a href="journalsr">revistas</a></li>
-                            <li><a href="contacsr">Contactenos</a></li>
+                            <li><a href="contacs">Contactenos</a></li>
                             </li>
 
                         </ul>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
                 <form action="" class="navbar-form navbar-right " role="search" style="margin-top:10px;">
-                    <input type="button" class="btn " class="btn btn-boton" onclick= "self.location.href = 'login'" value="Iniciar Sección">
-                    <input type="button" class="btn" onclick= "self.location.href = 'newuser'" value="Registrarse">
-                    <br>
-                    <br>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Buscar">
-                    </div>
-                    <button type="submit" class="btn ">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
+                    <input type="button" class="btn " class="btn btn-boton" onclick= "self.location.href='{{ url('/logout') }}'" value="Cerrar Sesión">
+                    <!--input type="button" class="btn" onclick= "self.location.href = 'newuser'" value="Registrarse"-->
+
                 </form>
+            </div>
+            </div>
+
 
 
             </div>
@@ -232,25 +229,45 @@
     </form>
     <br><br><br>
 
+    <!--Footer-->
+    <script src="http://maps.google.com/maps/api/js?sensor=false&callback=iniciar">
+    </script>
+
+    <script>
+        function iniciar() {
+            var mapOptions = {
+                center: new google.maps.LatLng(25.80, -80.30),
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP};
+            var map = new google.maps.Map(document.getElementById("map"),mapOptions);}
+    </script>
+
+    <div id="map"></div>
+
+
+
+
+
     <footer class="text-center">
         <div class="footer-above">
             <div class="container">
-                <div class="footer-col col-md-8">
+                <div class="footer-col col-md-8 google-maps">
                     <h3><a>Localización</a></h3>
 
+                    <!--hr width=150%  align=left-->
 
 
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.101396505633!2d-73.35884268549873!3d5.55198433523435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a7c3d644e3cd9%3A0x3c1e6f4e767244da!2sUPTC%2C+Universidad+Pedag%C3%B3gica+y+Tecnol%C3%B3gica+de+Colombia!5e0!3m2!1ses-419!2sco!4v1460729797782" width="400" height="180" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    <hr width=150%  align=left>
                 </div>
                 <div class="footer-col col-md-4">
 
-                    <h3><a>acerca de Mundocente</a></h3>
+                    <h3><a>Mundocente</a></h3>
                     <p>Red de docentes universitarios interesados </p>
                     <p>en compartir información sobre convocatorias </p>
                     <p>docentes, revistas científicas, eventos académicos</p>
                     <p> y mucho más.</p>
 
+                    </br>
                     <a class="btnn btn btn-social-icon btn-twitter" href="http://http://mundocente.co/">
                         <span class="fa fa-twitter" href="https://twitter.com/mundocente"></span>
                     </a>
@@ -290,7 +307,6 @@
                 </div>
             </div>
         </div>
-
     </footer>
 
 @stop
